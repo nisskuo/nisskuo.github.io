@@ -6,14 +6,16 @@
     <title>CQ Heropass Calculator</title>
     <meta name="theme-color" content="#def2d9">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="app" >
         <div class="dialong_info">
-            <h2 class="dialong_info_title">CQ 英雄通行證 好感度計算</h2>    
+            <label>Crusaders Quest</label>
+            <h2 class="dialong_info_title">英雄通行證 好感度計算</h2> 
         </div>
         <div class="input_group" onchange="heropass_cal()">
-            <label class="input_group_title">玩家當前好感度</label>
+            <label class="input_group_title">玩家目前好感度</label>
             <div class="input_1">
                 好感度❤ <input type="number" id="AffectionLevel" value="0" min="0" max="100">&nbsp;&nbsp;&nbsp;
                 積分 <input type="number" id="Affection" value="0" min="0" max="139"> /140  
@@ -27,7 +29,7 @@
             </div>
         </div>
         <div>
-            <label>預估缺少積分量：</label><br>
+            <p style="font-weight: bold;">◎ 預估缺少的積分：</p><br>
         </div>
         <div class="show-result">
             NaN
