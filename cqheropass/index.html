@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQ Heropass Calculator</title>
+    <meta name="theme-color" content="#def2d9">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="app" >
+        <div class="dialong_info">
+            <h2 class="dialong_info_title">CQ 英雄通行證 好感度計算</h2>    
+        </div>
+        <div class="input_group" onchange="heropass_cal()">
+            <label class="input_group_title">玩家當前好感度</label>
+            <div class="input_1">
+                好感度❤ <input type="number" id="AffectionLevel" value="0" min="0" max="100">&nbsp;&nbsp;&nbsp;
+                積分 <input type="number" id="Affection" value="0" min="0" max="139"> /140  
+            </div>
+        </div>
+        <div class="input_group" onchange="heropass_cal()">
+            <label class="input_group_title">已解的任務數量</label>
+            <div class="input_1">
+                每日：<input type="number" id="mission_daily" value="10" min="0" max="10">/10&nbsp;&nbsp;&nbsp;
+                每周：<input type="number" id="mission_weekly" value="10" min="0" max="10">/10
+            </div>
+        </div>
+        <div>
+            <label>預估缺少積分量：</label><br>
+        </div>
+        <div class="show-result">
+            NaN
+        </div>
+    </div>
+    <script src="heropass_cal.js"></script>
+</body>
+</html>
