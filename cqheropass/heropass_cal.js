@@ -13,6 +13,7 @@ function heropass_cal(){
     var Affection = parseInt(document.getElementById("Affection").value);
     var Cmission_daily = parseInt(document.getElementById("mission_daily").value);
     var Cmission_weekly = parseInt(document.getElementById("mission_weekly").value);
+    const p = document.querySelector('.show-result');
 
     //確認input正確性
     if(Cmission_daily>10||Cmission_weekly>10||Affection>=140)
@@ -33,7 +34,11 @@ function heropass_cal(){
     //var Today="2022/10/20";
     var n = Math.floor(diffDay(Today,startday))+1;
     if(n>28)
+    {
         n=28;
+        p.innerHTML = '活動已結束';
+        return ;
+    }
         
     console.log("活動天數:"+n);
 
@@ -50,8 +55,6 @@ function heropass_cal(){
 
     //玩家目前到活動結束可以獲得多少積分
     var result = playerNow + total_futurePoints;
-    
-    const p = document.querySelector('.show-result');
 
     if(result < targetPoints)
         p.innerHTML = '積分還缺少'+(targetPoints-result);
