@@ -33,7 +33,12 @@ function heropass_cal(){
     //var Today="2022/10/20";
     var n = Math.floor(diffDay(Today,startday))+1;
     if(n>28)
+    {
         n=28;
+        p = document.querySelector('.show-result');
+        p.innerHTML = '活動已結束';
+        return;
+    }
     console.log("活動天數:"+n);
 
     //玩家目前好感積分 + 未解的每日每周 = 今日能獲得的最高積分
