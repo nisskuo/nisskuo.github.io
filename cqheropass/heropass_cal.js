@@ -35,7 +35,7 @@ function heropass_cal(){
     if(n>28)
     {
         n=28;
-        p = document.querySelector('.show-result');
+        var p = document.querySelector('.show-result');
         p.innerHTML = '活動已結束';
         return;
     }
